@@ -18,12 +18,13 @@ class App extends React.Component {
     return (
       <div className= 'App'>
         <Input inputText= {this.state.textValue} />
+        <button onClick = {this._updateText}>Click to sumbit input!</button>
         <Ouput ouputText= {this.state.textValue}/>
       </div>
     )
   };
 
-  _updateText= ()=>{
+  _updateText= ({textValue})=>{
     this.setState({
       textValue: this.state.textValue
     })
