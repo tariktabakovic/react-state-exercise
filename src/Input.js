@@ -1,10 +1,14 @@
 import React from 'react';
 
-function Input (){
+function Input (props){
     return (
-        <label>
-            Type Here!
-        </label>
+        <div>
+            <input value = {`${props.textValue}`}>
+            </input>
+            <label>
+                Type Here!
+            </label>
+        </div>
     )
 }
 

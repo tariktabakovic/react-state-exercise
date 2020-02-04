@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Output(){
+function Output(props){
     return (
-        <div></div>
+        <div>
+        {props.textValue}
+        </div>
     );
 }
 
