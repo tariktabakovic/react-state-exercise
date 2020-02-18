@@ -17,16 +17,25 @@ class App extends React.Component {
   render(){
     return (
       <div className= 'App'>
+        <form onSubmit= {this._handleSubmit}>
+        {/* <input
+          onChange= {this._updateText}
+          value={this.state.textValue}
+          /> */}
         <Input inputText= {this.state.textValue} />
         <button onClick = {this._updateText}>Click to sumbit input!</button>
-        <Ouput ouputText= {this.state.textValue}/>
+        <Ouput ouputText= {this._updateText}
+        value= {this.state._updateText}
+        />
+        </form>
       </div>
     )
   };
 
-  _updateText= ({textValue})=>{
+  _updateText= ({event})=>{
+    console.log(event.target.value)
     this.setState({
-      textValue: this.state.textValue
+      textValue: event.target.textValue
     })
   }
 
