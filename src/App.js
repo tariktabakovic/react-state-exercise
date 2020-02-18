@@ -22,7 +22,7 @@ class App extends React.Component {
           onChange= {this._updateText}
           value={this.state.textValue}
           /> */}
-        <Input inputText= {this.state.textValue} />
+        <Input inputText= {this.state.textValue} updateText= {this._updateText}/>
         <button onClick = {this._updateText}>Click to sumbit input!</button>
         <Ouput outputText= {this.state.textValue}
         value= {this.state._updateText}
