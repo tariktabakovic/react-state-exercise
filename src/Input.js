@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Input ({textValue}){
-    console.log(textValue)
+function Input (props){
+    console.log(props.inputText)
     return ( 
         <div>
             <h1>Type Here</h1>
