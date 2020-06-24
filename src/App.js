@@ -9,33 +9,22 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state= {
-      textValue: 'This is the text value in state'
+      textValue: 'this is the text value in state'
     };
   }
-  
   
   render(){
     return (
       <div className= 'App'>
-        <form onSubmit= {this._handleSubmit}>
-        {/* <input
-          onChange= {this._updateText}
-          value={this.state.textValue}
-          /> */}
-        <Input inputText= {this.state.textValue} updateText= {this._updateText}/>
-        <button onClick = {this._updateText}>Click to sumbit input!</button>
-        <Ouput outputText= {this.state.textValue}
-        value= {this.state._updateText}
-        />
-        </form>
+        <Input inputText= {this.state.textValue} onChange= {this._updateText}/>
+        <Ouput outputText= {this.state.textValue} onChange= {this._updateText}/>
       </div>
     )
   };
 
-  _updateText= ({event})=>{
-    console.log(event.target.value)
+  _updateText= (event)=>{
     this.setState({
-      textValue: event.target.textValue
+      textValue: event.target.value
     })
   }
 

@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Output(props){
-    console.log(props.outputText)
+function Output({outputText}){
     return (
-        <div>{props.outputText}
+        <div>
+            {outputText}
         </div>
     );
 }

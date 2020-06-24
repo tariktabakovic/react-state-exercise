@@ -1,13 +1,12 @@
 import React from 'react';
 
-function Input (props){
-    console.log(props.inputText)
+function Input ({inputText, onChange}){
+    console.log({inputText})
     return ( 
-        <div>
-            <h1>Type Here</h1>
-            <input>
-            </input>
-        </div>
+        <>
+            <label>Type Here</label>
+            <input type="text" value={inputText} onChange={onChange}></input>
+        </>
         
     );
 }
