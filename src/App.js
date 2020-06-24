@@ -12,7 +12,7 @@ class App extends React.Component {
       textValue: 'this is the text value in state'
     };
   }
-  
+
   render(){
     return (
       <div className= 'App'>
