@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Input from './Input';
-import Ouput from './Output';
-
+import Output from './Output';
+import ClearInput from './ClearInput';
+import UpperCaseOutput from './UpperCaseOutput';
 
 class App extends React.Component {
   constructor(props){
@@ -17,7 +17,9 @@ class App extends React.Component {
     return (
       <div className= 'App'>
         <Input inputText= {this.state.textValue} onChange= {this._updateText}/>
-        <Ouput outputText= {this.state.textValue} onChange= {this._updateText}/>
+        <Output outputText= {this.state.textValue} onChange= {this._updateText}/>
+        <ClearInput onClick= {this._eraseText}/>
+        <UpperCaseOutput upperCase= {this.state.textValue}/>
       </div>
     )
   };
@@ -25,6 +27,12 @@ class App extends React.Component {
   _updateText= (event)=>{
     this.setState({
       textValue: event.target.value
+    })
+  }
+
+  _eraseText= (event) =>{
+    this.setState({
+      textValue: ""
     })
   }
 
